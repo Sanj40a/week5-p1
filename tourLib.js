@@ -16,7 +16,7 @@ const getAll = () => {
 };
 
 const addOne = (name, info, image, price) => {
-  if (!name | !info | !image | !price) {
+  if (!name || !info || !image || !price) {
     return false;
   }
   const newTour = {
@@ -70,19 +70,19 @@ if (require.main === module) {
   console.log(result);
   result = addOne("Finland in 7 Days Tour", "Finland is synonymous.", "https://www.course-api.com/images/tours/tour-2.jpeg", 800);
   console.log(result);
-  console.log(`getAll called: ${getAll()}`);
-  console.log(`findById called: ${findById(2)}`);
+  console.log("getAll called:", getAll());
+  console.log("findById called:", findById(2));
   console.log(
-    `updateById called: ${updateOneById(2, {
+    "updateById called:", updateOneById(2, {
       name: "Italy in 7 Days Tour",
       info: "Paris is synonymous.",
       image: "https://www.course-api.com/images/tours/tour-2.jpeg",
       price: 800
-    })}`
+    })
   );
-  console.log(`findById called after item updated: ${findById(2)}`);
-  console.log(`deleteById called: ${deleteOneById(2)}`);
-  console.log(`findById called after item deleted: ${findById(2)}`);
+  console.log("findById called after item updated:", findById(2));
+  console.log("deleteById called:", deleteOneById(2));
+  console.log("findById called after item deleted:", findById(2));
 }
 
 module.exports = {
