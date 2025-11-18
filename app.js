@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 const app = express();
 
@@ -33,3 +34,18 @@ const port = 4000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+=======
+const express = require('express');
+const app = express();
+
+// Import the router (instead of individual functions)
+const tourRouter = require('./routes/tourRouter.js');
+
+app.use(express.json());
+
+// Use the router for all /tours routes
+app.use('/tours', tourRouter);
+
+const port = 4000;
+app.listen(port, () => console.log(`Server on port ${port}`));
+>>>>>>> dfee731de32b77151a23b63e3f0f5d944f9309b4

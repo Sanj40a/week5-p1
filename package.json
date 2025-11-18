@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "jest",
+=======
+    "test": "node feedbackLib.js",
+>>>>>>> dfee731de32b77151a23b63e3f0f5d944f9309b4
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
@@ -15,11 +19,15 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "jest": "^30.2.0",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.4"
   },
   "jest": {
     "testEnvironment": "node"
+=======
+    "nodemon": "^3.1.10"
+>>>>>>> dfee731de32b77151a23b63e3f0f5d944f9309b4
   }
 }
